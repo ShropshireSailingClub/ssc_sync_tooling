@@ -13,7 +13,7 @@ check:
 
 .PHONY: download
 download:
-	rclone clone ${CONNECTION_ARGS} ${EXCLUDES} ${REMOTE_SSC} ${LOCAL_SSC}
+	rclone copy ${CONNECTION_ARGS} ${EXCLUDES} ${REMOTE_SSC} ${LOCAL_SSC}
 
 .PHONY: upload_branch
 upload_branch:
