@@ -5,7 +5,12 @@ LOCAL_SSC=../www.shropshiresailingclub.co.uk
 
 .PHONY: default
 default:
-	@echo There is no default
+	@echo "Tasks available:"
+	@echo
+	@echo "* check\t\t- Check and output which files differ remotely to local"
+	@echo "* download\t- Grab remote content into local folder"
+	@echo "* upload_branch\t- Given local copy is on a branch, upload the diff to master"
+	@echo
 
 .PHONY: check
 check:
