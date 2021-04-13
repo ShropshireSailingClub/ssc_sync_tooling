@@ -20,9 +20,9 @@ download:
 	rclone copy ${CONNECTION_ARGS} ${EXCLUDES} ${REMOTE_SSC} ${LOCAL_SSC}
 
 .PHONY: upload_branch
-# Given local copy is on a branch, upload the diff to master
+# Given local copy is on a branch, upload the diff to main
 upload_branch:
-	GIT_DIR=${LOCAL_SSC}/.git git diff --name-only master..HEAD | tee tmp/files_to_upload.txt | sed 's/^/ -> /'
+	GIT_DIR=${LOCAL_SSC}/.git git diff --name-only main..HEAD | tee tmp/files_to_upload.txt | sed 's/^/ -> /'
 	@echo
 	rclone copy -v ${CONNECTION_ARGS} --include-from tmp/files_to_upload.txt ${LOCAL_SSC} ${REMOTE_SSC}
 	rm -rf tmp/files_to_upload.txt
