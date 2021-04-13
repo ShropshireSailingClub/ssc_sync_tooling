@@ -1,6 +1,6 @@
-CONNECTION_ARGS=--checkers 2 --transfers 2 --progress --no-update-modtime
+CONNECTION_ARGS=--progress --no-update-modtime
 EXCLUDES=--exclude '.git/**' --exclude .DS_Store
-REMOTE_SSC=ssc:
+REMOTE_SSC=sscftp:public_html/
 LOCAL_SSC=../www.shropshiresailingclub.co.uk
 
 .PHONY: default
