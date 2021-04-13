@@ -1,5 +1,5 @@
 CONNECTION_ARGS=--progress --no-update-modtime
-EXCLUDES=--exclude '.git/**' --exclude .DS_Store
+EXCLUDES=--exclude '.git/**' --exclude .DS_Store --exclude .gitignore
 REMOTE_SSC=sscftp:public_html/
 LOCAL_SSC=../www.shropshiresailingclub.co.uk
 
